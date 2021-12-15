@@ -16,16 +16,15 @@ import java.util.List;
 @RequestMapping("/matches")
 public class MatchApi {
 
-    @Getter
     private List<Match> matchList;
 
-
     public MatchApi() {
+        Team manchester_city = new Team(1L, "Manchester City");
         this.matchList = new ArrayList<>();
         matchList.add(new Match(1L,
-                new Team(1L, "Manchester City"),
-                new Team(2L,"Leeds United"),
-                new Result(2,3),
+                manchester_city,
+                new Team(2L, "Leeds United"),
+                new Result(2, 3),
                 new Statistics(7,
                         0,
                         64,
