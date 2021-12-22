@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Match {
+public class Match extends MatchSimplified {
 
     private Long id;
     private Team homeTeam;
